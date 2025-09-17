@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,16 +51,34 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        brand: {
+          orange: "hsl(var(--brand-orange))",
+          "orange-light": "hsl(var(--brand-orange-light))",
+          "orange-dark": "hsl(var(--brand-orange-dark))",
         },
+        gray: {
+          50: "hsl(var(--gray-50))",
+          100: "hsl(var(--gray-100))",
+          200: "hsl(var(--gray-200))",
+          300: "hsl(var(--gray-300))",
+          400: "hsl(var(--gray-400))",
+          500: "hsl(var(--gray-500))",
+          600: "hsl(var(--gray-600))",
+          700: "hsl(var(--gray-700))",
+          800: "hsl(var(--gray-800))",
+          900: "hsl(var(--gray-900))",
+        },
+      },
+      backgroundImage: {
+        'gradient-orange': 'var(--gradient-orange)',
+        'gradient-gray': 'var(--gradient-gray)',
+        'gradient-subtle': 'var(--gradient-subtle)',
+      },
+      boxShadow: {
+        'subtle': 'var(--shadow-subtle)',
+        'medium': 'var(--shadow-medium)',
+        'large': 'var(--shadow-large)',
+        'orange': 'var(--shadow-orange)',
       },
       borderRadius: {
         lg: "var(--radius)",

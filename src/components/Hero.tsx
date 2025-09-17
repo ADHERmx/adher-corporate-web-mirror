@@ -1,0 +1,104 @@
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Award, Users, Calendar } from "lucide-react";
+import heroImage from "@/assets/hero-powder-coating.jpg";
+
+const Hero = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section id="inicio" className="relative min-h-screen flex items-center pt-16">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroImage}
+          alt="Pintura electrostática en polvo - Acabados Adher"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gray-900/70"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="max-w-4xl">
+          <Badge className="bg-primary/20 text-primary-foreground border-primary/30 mb-6">
+            <Award className="w-4 h-4 mr-2" />
+            Certificación ISO 9001:2008
+          </Badge>
+          
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
+            Pioneros en{" "}
+            <span className="text-gradient bg-gradient-to-r from-brand-orange to-brand-orange-light bg-clip-text text-transparent">
+              Pintura Electrostática
+            </span>
+            {" "}desde 1978
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl">
+            Empresa líder en pintura electrostática en polvo, reconocida por nuestra 
+            calidad excepcional, innovación constante y servicio de primera clase.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <Button
+              size="lg"
+              className="bg-gradient-orange hover:bg-gradient-orange/90 text-white shadow-orange"
+              onClick={() => scrollToSection('servicios')}
+            >
+              Ver Servicios
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white/30 text-white hover:bg-white/10"
+              onClick={() => scrollToSection('contacto')}
+            >
+              Contactar Ahora
+            </Button>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl">
+            <div className="flex items-center space-x-3 text-white">
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                <Calendar className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold">45+</div>
+                <div className="text-sm text-gray-300">Años de experiencia</div>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-3 text-white">
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold">1000+</div>
+                <div className="text-sm text-gray-300">Clientes satisfechos</div>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-3 text-white">
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                <Award className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold">ISO</div>
+                <div className="text-sm text-gray-300">Certificación 9001:2008</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
