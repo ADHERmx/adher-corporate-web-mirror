@@ -2,24 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Award, Users, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-powder-coating.jpg";
-
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-16">
+  return <section id="inicio" className="relative min-h-screen flex items-center pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Pintura electrostática en polvo - Acabados Adher"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Pintura electrostática en polvo - Acabados Adher" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gray-900/70"></div>
       </div>
 
@@ -45,20 +40,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button
-              size="lg"
-              className="bg-gradient-orange hover:bg-gradient-orange/90 text-white shadow-orange"
-              onClick={() => scrollToSection('servicios')}
-            >
+            <Button size="lg" className="bg-gradient-orange hover:bg-gradient-orange/90 text-white shadow-orange" onClick={() => scrollToSection('servicios')}>
               Ver Servicios
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10"
-              onClick={() => scrollToSection('contacto')}
-            >
+            <Button size="lg" variant="outline" onClick={() => scrollToSection('contacto')} className="border-white/30 bg-zinc-200 hover:bg-zinc-100 text-zinc-950 text-sm">
               Contactar Ahora
             </Button>
           </div>
@@ -97,8 +83,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

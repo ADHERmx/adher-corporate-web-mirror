@@ -1,14 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Eye, Lightbulb, Shield } from "lucide-react";
-
 const AboutUs = () => {
-  return (
-    <section id="nosotros" className="py-20 bg-gradient-subtle">
+  return <section id="nosotros" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-            Quiénes Somos
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Quiénes somos</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Una empresa comprometida con la excelencia y la innovación en el sector 
             de acabados industriales
@@ -59,9 +55,7 @@ const AboutUs = () => {
 
         {/* Values */}
         <div className="bg-white rounded-2xl p-8 shadow-medium">
-          <h3 className="text-2xl font-heading font-semibold text-center mb-8">
-            Nuestros Valores
-          </h3>
+          <h3 className="text-2xl font-heading font-semibold text-center mb-8">Nuestros valores</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -98,8 +92,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutUs;
