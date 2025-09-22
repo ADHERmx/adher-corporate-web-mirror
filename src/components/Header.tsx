@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
+import adherLogo from "@/assets/adher-logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollToSection = (id: string) => {
@@ -17,8 +18,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-10 h-10 bg-gradient-orange rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Ad</span>
+            <div className="w-10 h-10 bg-gradient-orange rounded-lg flex items-center justify-center p-1">
+              <img src={adherLogo} alt="Adher Logo" className="w-full h-full object-contain" />
             </div>
             <div className="ml-3">
               <h1 className="text-lg font-heading font-semibold">Acabados Adher</h1>
