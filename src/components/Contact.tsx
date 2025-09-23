@@ -38,15 +38,21 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span>Nuestra Ubicación</span>
+                  <span>Nuestras Ubicaciones</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2 text-muted-foreground">
-                  <p>Calle Industrial #123</p>
-                  <p>Zona Industrial Norte</p>
-                  <p>54000 Tlalnepantla, Estado de México</p>
-                  <p>México</p>
+                <div className="space-y-4 text-muted-foreground">
+                  <div>
+                    <div className="font-medium text-foreground mb-1">Oficinas Generales</div>
+                    <p>Amado Nervo 2910 Norte</p>
+                    <p>Col. Bella Vista</p>
+                  </div>
+                  <div>
+                    <div className="font-medium text-foreground mb-1">Planta</div>
+                    <p>Amado Nervo 2902 Norte</p>
+                    <p>Col. Bella Vista</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -61,12 +67,14 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <div>
-                    <div className="font-medium">Ventas:</div>
-                    <div className="text-muted-foreground">+52 (55) 1234-5678</div>
+                    <div className="font-medium">Oficinas Generales:</div>
+                    <div className="text-muted-foreground">(81) 83 514881</div>
+                    <div className="text-muted-foreground">(81) 81150184</div>
                   </div>
                   <div>
-                    <div className="font-medium">Servicio:</div>
-                    <div className="text-muted-foreground">+52 (55) 8765-4321</div>
+                    <div className="font-medium">Planta:</div>
+                    <div className="text-muted-foreground">(81) 84005241</div>
+                    <div className="text-muted-foreground">(81) 83514881</div>
                   </div>
                 </CardContent>
               </Card>
@@ -80,12 +88,13 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <div>
-                    <div className="font-medium">General:</div>
-                    <div className="text-muted-foreground">info@adher.com.mx</div>
+                    <div className="font-medium">Oficinas Generales:</div>
+                    <div className="text-muted-foreground">adher@webtelmex.net.mx</div>
                   </div>
                   <div>
-                    <div className="font-medium">Ventas:</div>
-                    <div className="text-muted-foreground">ventas@adher.com.mx</div>
+                    <div className="font-medium">Planta:</div>
+                    <div className="text-muted-foreground">flopez@adher.com.mx</div>
+                    <div className="text-muted-foreground">mlecuona@adher.com.mx</div>
                   </div>
                 </CardContent>
               </Card>
