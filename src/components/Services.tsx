@@ -41,10 +41,7 @@ const Services = () => {
             Nuestros Servicios
           </Badge>
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Soluciones integrales de acabados</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ofrecemos una gama completa de servicios especializados en pintura 
-            electrostática y acabados industriales
-          </p>
+          
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

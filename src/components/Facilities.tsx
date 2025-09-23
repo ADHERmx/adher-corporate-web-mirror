@@ -41,10 +41,7 @@ const Facilities = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Tecnología de Vanguardia
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Instalaciones modernas equipadas con la más alta tecnología para 
-            garantizar la calidad y eficiencia en todos nuestros procesos
-          </p>
+          
         </div>
 
         {/* Main Facilities Gallery */}
