@@ -34,10 +34,7 @@ const Hero = () => {
             {" "}desde 1978
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl">
-            Empresa líder en pintura electrostática en polvo, reconocida por nuestra 
-            calidad excepcional, innovación constante y servicio de primera clase.
-          </p>
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl">Empresa líder en pintura electrostática en polvo. Sirviendo a la indus manufacturera de refrigeración, línea blanca, automotríz, mueblera, alimenticia, de la construcción y a empresas de giro comercial.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button size="lg" className="bg-gradient-orange hover:bg-gradient-orange/90 text-white shadow-orange" onClick={() => scrollToSection('servicios')}>
