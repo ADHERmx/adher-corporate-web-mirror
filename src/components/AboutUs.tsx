@@ -52,45 +52,6 @@ const AboutUs = () => {
             </CardContent>
           </Card>
         </div>
-
-        {/* Values */}
-        <div className="bg-white rounded-2xl p-8 shadow-medium">
-          <h3 className="text-2xl font-heading font-semibold text-center mb-8">Nuestros valores</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-primary" />
-              </div>
-              <h4 className="font-heading font-semibold mb-2">Calidad</h4>
-              <p className="text-sm text-muted-foreground">
-                Compromiso inquebrantable con los más altos estándares de calidad en 
-                todos nuestros procesos y servicios.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="w-8 h-8 text-primary" />
-              </div>
-              <h4 className="font-heading font-semibold mb-2">Innovación</h4>
-              <p className="text-sm text-muted-foreground">
-                Búsqueda constante de nuevas tecnologías y métodos para mejorar 
-                nuestros servicios y procesos.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-primary" />
-              </div>
-              <h4 className="font-heading font-semibold mb-2">Servicio</h4>
-              <p className="text-sm text-muted-foreground">
-                Dedicación total a satisfacer las necesidades de nuestros clientes 
-                con un servicio personalizado y eficiente.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>;
 };
