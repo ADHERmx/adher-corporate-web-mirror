@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-10 h-10 bg-gradient-orange rounded-lg flex items-center justify-center p-1">
+            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1">
               <img src={adherLogo} alt="Adher Logo" className="w-full h-full object-contain" />
             </div>
             <div className="ml-3">
