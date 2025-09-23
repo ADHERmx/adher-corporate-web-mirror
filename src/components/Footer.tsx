@@ -1,9 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Award, Mail, Phone, MapPin, Globe } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-white py-12">
+  return <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -97,24 +95,20 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
-                <span>Tlalnepantla, Estado de México</span>
+                <span>Amado Nervo 2910 Norte, Col. Bella Vista</span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
-                <span>+52 (55) 1234-5678</span>
+                <span>(81) 83 514 881
+(81) 81 150 184</span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
-                <span>info@adher.com.mx</span>
+                <span>adher@webtelmex.net.mx</span>
               </li>
               <li className="flex items-center">
                 <Globe className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
-                <a 
-                  href="https://www.adher.com.mx" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
+                <a href="https://www.adher.com.mx" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   www.adher.com.mx
                 </a>
               </li>
@@ -134,8 +128,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
