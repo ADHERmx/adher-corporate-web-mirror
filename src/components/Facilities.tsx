@@ -72,24 +72,7 @@ const Facilities = () => {
 
         {/* Capabilities Overview */}
         <div className="mt-16 text-center">
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">15,000m²</div>
-              <div className="text-sm text-muted-foreground">Superficie total</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Operación continua</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Piezas por hora</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">ISO</div>
-              <div className="text-sm text-muted-foreground">Certificación 9001:2008</div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;
