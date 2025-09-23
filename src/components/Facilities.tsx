@@ -62,7 +62,7 @@ const Facilities = () => {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl font-heading">{facility.title}</CardTitle>
-                  <p className="text-sm text-muted-foreground">{facility.description}</p>
+                  
                 </CardHeader>
                 
               </Card>;

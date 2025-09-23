@@ -15,10 +15,7 @@ const Contact = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
             Hablemos de tu Proyecto
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Estamos aquí para ayudarte con todas tus necesidades de pintura 
-            electrostática y acabados industriales
-          </p>
+          
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
