@@ -25,7 +25,7 @@ const Services = () => {
   }, {
     icon: CheckCircle,
     title: "Aseguramiento de Calidad",
-    description: "Pruebas especializadas y control de calidad riguroso para garantizar la excelencia en cada proyecto.",
+    description: "Pruebas de adherencia cuadrática, impacto, flexibilidad, dureza, curado, cámara salina, brillo y colorimetría.",
     features: ["Pruebas especializadas", "Control riguroso", "Certificación de procesos", "Trazabilidad completa"]
   }, {
     icon: Wrench,
