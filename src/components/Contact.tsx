@@ -3,19 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Globe, 
-  Clock,
-  Send,
-  MessageSquare
-} from "lucide-react";
-
+import { MapPin, Phone, Mail, Globe, Clock, Send, MessageSquare } from "lucide-react";
 const Contact = () => {
-  return (
-    <section id="contacto" className="py-20 bg-background">
+  return <section id="contacto" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="bg-primary/10 text-primary mb-4">
@@ -72,7 +62,7 @@ const Contact = () => {
                     <div className="text-muted-foreground">(81) 81150184</div>
                   </div>
                   <div>
-                    <div className="font-medium">Planta:</div>
+                    
                     <div className="text-muted-foreground">(81) 84005241</div>
                     <div className="text-muted-foreground">(81) 83514881</div>
                   </div>
@@ -92,7 +82,7 @@ const Contact = () => {
                     <div className="text-muted-foreground">adher@webtelmex.net.mx</div>
                   </div>
                   <div>
-                    <div className="font-medium">Planta:</div>
+                    
                     <div className="text-muted-foreground">flopez@adher.com.mx</div>
                     <div className="text-muted-foreground">mlecuona@adher.com.mx</div>
                   </div>
@@ -109,12 +99,7 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <a 
-                    href="https://www.adher.com.mx" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
+                  <a href="https://www.adher.com.mx" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                     www.adher.com.mx
                   </a>
                 </CardContent>
@@ -183,10 +168,7 @@ const Contact = () => {
 
                 <div>
                   <label className="text-sm font-medium mb-2 block">Mensaje *</label>
-                  <Textarea 
-                    placeholder="Describe tu proyecto o consulta..."
-                    rows={4}
-                  />
+                  <Textarea placeholder="Describe tu proyecto o consulta..." rows={4} />
                 </div>
 
                 <Button className="w-full bg-gradient-orange hover:bg-gradient-orange/90 text-white">
@@ -203,8 +185,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
