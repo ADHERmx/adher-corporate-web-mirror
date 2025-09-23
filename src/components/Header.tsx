@@ -22,7 +22,7 @@ const Header = () => {
               <img src={adherLogo} alt="Adher Logo" className="w-full h-full object-contain" />
             </div>
             <div className="ml-3">
-              <h1 className="text-lg font-heading font-semibold">Acabados Adher</h1>
+              <h1 className="text-lg font-heading font-semibold">Acabados Adher, S.A. de C</h1>
               <p className="text-xs text-muted-foreground">S.A. de C.V.</p>
             </div>
           </div>
