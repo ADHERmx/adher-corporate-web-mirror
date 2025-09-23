@@ -5,10 +5,7 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Quiénes somos</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Una empresa comprometida con la excelencia y la innovación en el sector 
-            de acabados industriales
-          </p>
+          
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -23,12 +20,7 @@ const AboutUs = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground leading-relaxed">
-                Ser la empresa líder en pintura electrostática, reconocida por nuestros 
-                clientes y comprometida con el medio ambiente. Buscamos establecer el 
-                estándar de excelencia en nuestra industria a través de la innovación 
-                continua y prácticas sostenibles.
-              </p>
+              <p className="text-muted-foreground leading-relaxed">Ser la empresa líder en la aplicación de pintura electrostática, con el reconocimiento de nuestros clientes y el compromiso de mantener la calidad y el cuidado del medio ambiente.</p>
             </CardContent>
           </Card>
 
@@ -43,12 +35,7 @@ const AboutUs = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground leading-relaxed">
-                Ofrecer el mejor servicio de pintura electrostática siendo un proveedor 
-                confiable y competitivo. Nos comprometemos a superar las expectativas 
-                de nuestros clientes mediante la entrega de soluciones de alta calidad 
-                y un servicio excepcional.
-              </p>
+              <p className="text-muted-foreground leading-relaxed">Proporcionar a nuestros clientes el mejor servicio con la seguridad de que cuentan con un proveedor confiable que se preocupa por mantener los recursos humanos, materiales y técnicos necesarios que nos permiten ser competitivos.</p>
             </CardContent>
           </Card>
         </div>
