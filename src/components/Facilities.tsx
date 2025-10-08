@@ -1,29 +1,40 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Factory, Thermometer, Microscope, Truck } from "lucide-react";
-import batchOvenImage from "@/assets/facility-batch-oven.jpg";
+import { Factory, Flame, Microscope, Truck, Grip, Building2 } from "lucide-react";
 import curingOvenImage from "@/assets/facility-curing-oven.jpg";
 import qualityControlImage from "@/assets/facility-quality-control.jpg";
 import shippingAreaImage from "@/assets/facility-shipping-area.jpg";
+import monorailLineImage from "@/assets/facility-monorail-line.jpg";
+import blastingRoomImage from "@/assets/facility-blasting-room.jpg";
 const Facilities = () => {
   const facilities = [{
-    title: "Horno de Batch",
-    description: "Horno de lotes de alta capacidad para el procesamiento eficiente de grandes volúmenes de piezas con control preciso de temperatura.",
-    image: batchOvenImage,
+    title: "Tecnología de Aplicación Continua con Línea en Monorriel",
+    description: "Sistema automatizado de última generación para aplicación continua de pintura electrostática.",
+    image: monorailLineImage,
     icon: Factory,
-    specs: ["Capacidad: 500kg", "Temperatura: hasta 220°C", "Control automático", "Eficiencia energética"]
+    specs: [
+      "Túnel de Desengrase con 5 etapas, ofreciendo la mejor tecnología en químicos para maximizar la adherencia de pintura y proteger el metal contra la corrosión",
+      "Cabina de aplicación de pintura con cambio de color rápido",
+      "Horno de secado y curado de alta eficiencia energética"
+    ]
   }, {
-    title: "Horno de Curado",
-    description: "Sistema de curado continuo con tecnología avanzada que garantiza el acabado perfecto de la pintura electrostática.",
+    title: "Horno de Quemado de la Más Alta Tecnología",
+    description: "Sistema avanzado de pirólisis para limpieza y recuperación de piezas, racks y ganchos metálicos.",
     image: curingOvenImage,
-    icon: Thermometer,
-    specs: ["Curado uniforme", "Control de temperatura", "Sistema continuo", "Tecnología avanzada"]
+    icon: Flame,
+    specs: ["Tecnología de pirólisis", "Limpieza profunda", "Recuperación eficiente", "Control automatizado"]
   }, {
-    title: "Área de Secado e Inspección",
-    description: "Zona especializada para el secado controlado y inspección de calidad, asegurando que cada pieza cumpla con nuestros altos estándares.",
+    title: "Cuarto de Granallado GOFF",
+    description: "Equipo de granallado GOFF de la más alta tecnología para preparación óptima de superficies.",
+    image: blastingRoomImage,
+    icon: Grip,
+    specs: ["Tecnología GOFF", "Preparación superior", "Limpieza profunda", "Mejor adherencia"]
+  }, {
+    title: "Laboratorio de Calidad",
+    description: "Instalaciones especializadas para pruebas y control de calidad con equipos de última generación.",
     image: qualityControlImage,
     icon: Microscope,
-    specs: ["Secado controlado", "Inspección rigurosa", "Control de calidad", "Certificación de procesos"]
+    specs: ["Pruebas especializadas", "Equipos de precisión", "Certificación de procesos", "Control riguroso"]
   }, {
     title: "Área de Embarque",
     description: "Zona logística especializada para el empaque y embarque seguro de productos terminados con control de inventarios y entregas programadas.",
@@ -45,7 +56,7 @@ const Facilities = () => {
         </div>
 
         {/* Main Facilities Gallery */}
-        <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {facilities.map((facility, index) => {
           const IconComponent = facility.icon;
           return <Card key={index} className="card-hover card-shadow overflow-hidden group">
