@@ -20,8 +20,8 @@ const Services = () => {
   }, {
     icon: Clock,
     title: "Just In Time",
-    description: "Entregas programadas según sus necesidades de producción para optimizar su cadena de suministro.",
-    features: ["Entregas puntuales", "Logística optimizada", "Reducción de inventarios", "Eficiencia mejorada"]
+    description: "Entregas programadas según sus necesidades de producción para optimizar su cadena de suministro. Servicio disponible en horario diurno y nocturno.",
+    features: ["Entregas puntuales", "Horario diurno y nocturno", "Logística optimizada", "Reducción de inventarios"]
   }, {
     icon: CheckCircle,
     title: "Aseguramiento de Calidad",

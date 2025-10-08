@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Award, Users, Calendar } from "lucide-react";
+import { ArrowRight, Award, Users, Calendar, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-powder-coating.jpg";
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -58,7 +58,15 @@ const Hero = () => {
               </div>
             </div>
             
-            
+            <div className="flex items-center space-x-3 text-white">
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                <Clock className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold">24/7</div>
+                <div className="text-sm text-gray-300">Entregas diurnas y nocturnas</div>
+              </div>
+            </div>
             
             <div className="flex items-center space-x-3 text-white">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
