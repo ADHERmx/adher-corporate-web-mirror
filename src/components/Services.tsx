@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Palette, Droplets, Package, Clock, CheckCircle, Wrench, Shield, Sparkles } from "lucide-react";
+import { Palette, Grip, Package, Clock, CheckCircle, Wrench, Shield, Sparkles } from "lucide-react";
 const Services = () => {
   const services = [{
     icon: Palette,
@@ -8,7 +8,7 @@ const Services = () => {
     description: "Amplia variedad de metales, texturas y colores para satisfacer cualquier necesidad de acabado industrial.",
     features: ["Múltiples texturas", "Amplia gama de colores", "Diferentes tipos de metal", "Acabados personalizados"]
   }, {
-    icon: Droplets,
+    icon: Grip,
     title: "Granallado/Shot Blast",
     description: "Preparación de superficies mediante granallado para garantizar la mejor adherencia y calidad del acabado.",
     features: ["Limpieza profunda", "Preparación óptima", "Mejor adherencia", "Acabado duradero"]
