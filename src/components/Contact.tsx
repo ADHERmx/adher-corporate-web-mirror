@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Globe, Clock, Send, MessageSquare } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 const Contact = () => {
   return <section id="contacto" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -34,11 +35,13 @@ const Contact = () => {
                     <div className="font-medium text-foreground mb-1">Oficinas Generales</div>
                     <p>Amado Nervo 2910 Norte</p>
                     <p>Col. Bella Vista</p>
+                    <p>Monterrey, NL, 64410</p>
                   </div>
                   <div>
                     <div className="font-medium text-foreground mb-1">Planta</div>
                     <p>Amado Nervo 2902 Norte</p>
                     <p>Col. Bella Vista</p>
+                    <p>Monterrey, NL, 64410</p>
                   </div>
                 </div>
               </CardContent>
@@ -53,39 +56,52 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                  <div>
-                    <div className="font-medium">Oficinas Generales:</div>
-                    <div className="text-muted-foreground">(81) 83 514881</div>
-                    <div className="text-muted-foreground">(81) 81150184</div>
-                  </div>
-                  <div>
-                    
-                    <div className="text-muted-foreground">(81) 84005241</div>
-                    <div className="text-muted-foreground">(81) 83514881</div>
-                  </div>
+                  <a href="tel:8183510648" className="block text-muted-foreground hover:text-primary transition-colors">
+                    (81) 8351 0648
+                  </a>
+                  <a href="tel:8183514881" className="block text-muted-foreground hover:text-primary transition-colors">
+                    (81) 8351 4881
+                  </a>
                 </CardContent>
               </Card>
 
               <Card className="card-shadow">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-3 text-lg">
-                    <Mail className="w-5 h-5 text-primary" />
-                    <span>Correos</span>
+                    <FaWhatsapp className="w-5 h-5 text-primary" />
+                    <span>WhatsApp</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-2">
-                  <div>
-                    <div className="font-medium">Oficinas Generales:</div>
-                    <div className="text-muted-foreground">adher@webtelmex.net.mx</div>
-                  </div>
-                  <div>
-                    
-                    <div className="text-muted-foreground">flopez@adher.com.mx</div>
-                    <div className="text-muted-foreground">mlecuona@adher.com.mx</div>
-                  </div>
+                <CardContent>
+                  <a 
+                    href="https://wa.me/528119103216" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                  >
+                    <FaWhatsapp className="w-4 h-4" />
+                    (81) 1910 3216
+                  </a>
                 </CardContent>
               </Card>
             </div>
+
+            <Card className="card-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-3 text-lg">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <span>Correo</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <a 
+                  href="mailto:ventas@adher.com.mx" 
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  ventas@adher.com.mx
+                </a>
+              </CardContent>
+            </Card>
 
             <div className="grid md:grid-cols-2 gap-4">
               <Card className="card-shadow">
