@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Factory, Flame, Microscope, Truck, Grip, Building2 } from "lucide-react";
 import curingOvenImage from "@/assets/facility-curing-oven.jpg";
@@ -70,9 +70,18 @@ const Facilities = () => {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl font-heading">{facility.title}</CardTitle>
-                  
+                  <CardDescription>{facility.description}</CardDescription>
                 </CardHeader>
-                
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {facility.specs.map((spec, specIndex) => (
+                      <li key={specIndex} className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>{spec}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
               </Card>;
         })}
         </div>
