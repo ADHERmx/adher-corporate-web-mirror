@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Palette, Grip, Package, Clock, CheckCircle, Wrench, Shield, Sparkles } from "lucide-react";
+import { Palette, Grip, Package, Clock, CheckCircle, Wrench, Flame, Shield, Sparkles } from "lucide-react";
 const Services = () => {
   const services = [{
     icon: Palette,
@@ -32,6 +32,11 @@ const Services = () => {
     title: "Mantenimiento Preventivo",
     description: "Servicios de mantenimiento para equipos de pintura y sistemas de acabados industriales.",
     features: ["Mantenimiento programado", "Diagnósticos precisos", "Reparaciones especializadas", "Optimización de equipos"]
+  }, {
+    icon: Flame,
+    title: "Quemado de Piezas",
+    description: "Ofrecemos servicios de quemado de piezas, racks, ganchos metálicos por medio de un horno de pirólisis.",
+    features: ["Horno de pirólisis", "Limpieza profunda", "Recuperación de piezas", "Proceso eficiente"]
   }];
   return <section id="servicios" className="py-20 bg-background">
       <div className="container mx-auto px-4">
