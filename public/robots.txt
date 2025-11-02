@@ -1,3 +1,5 @@
+# robots.txt for Acabados Adher S.A. de C.V.
+
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +14,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://www.adher.com.mx/sitemap.xml

@@ -11,6 +11,7 @@ const Facilities = () => {
     title: "Tecnología de Aplicación Continua con Línea en Monorriel",
     description: "Sistema automatizado de última generación para aplicación continua de pintura electrostática.",
     image: monorailLineImage,
+    alt: "Línea de monorriel automatizada para aplicación de pintura electrostática en polvo en Acabados Adher",
     icon: Factory,
     specs: [
       "Túnel de Desengrase con 5 etapas, ofreciendo la mejor tecnología en químicos para maximizar la adherencia de pintura y proteger el metal contra la corrosión",
@@ -21,24 +22,28 @@ const Facilities = () => {
     title: "Horno de Quemado de la Más Alta Tecnología",
     description: "Sistema avanzado de pirólisis para limpieza y recuperación de piezas, racks y ganchos metálicos.",
     image: curingOvenImage,
+    alt: "Horno de curado industrial de alta tecnología para pintura electrostática en Monterrey",
     icon: Flame,
     specs: ["Tecnología de pirólisis", "Limpieza profunda", "Recuperación eficiente", "Control automatizado"]
   }, {
     title: "Cuarto de Granallado GOFF",
     description: "Equipo de granallado GOFF de la más alta tecnología para preparación óptima de superficies.",
     image: blastingRoomImage,
+    alt: "Cuarto de granallado GOFF para preparación de superficies metálicas en Acabados Adher",
     icon: Grip,
     specs: ["Tecnología GOFF", "Preparación superior", "Limpieza profunda", "Mejor adherencia"]
   }, {
     title: "Laboratorio de Calidad",
     description: "Instalaciones especializadas para pruebas y control de calidad con equipos de última generación.",
     image: qualityControlImage,
+    alt: "Laboratorio de control de calidad con equipos de precisión certificado ISO 9001:2008",
     icon: Microscope,
     specs: ["Pruebas especializadas", "Equipos de precisión", "Certificación de procesos", "Control riguroso"]
   }, {
     title: "Área de Embarque",
     description: "Zona logística especializada para el empaque y embarque seguro de productos terminados con control de inventarios y entregas programadas.",
     image: shippingAreaImage,
+    alt: "Área de embarque y empaque especializado con entregas programadas 24/7 en Monterrey",
     icon: Truck,
     specs: ["Logística optimizada", "Empaque especializado", "Control de inventarios", "Entregas programadas"]
   }];
@@ -61,7 +66,7 @@ const Facilities = () => {
           const IconComponent = facility.icon;
           return <Card key={index} className="card-hover card-shadow overflow-hidden group">
                 <div className="relative overflow-hidden">
-                  <img src={facility.image} alt={facility.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={facility.image} alt={facility.alt} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-4 left-4">
                     <div className="w-10 h-10 bg-gradient-orange rounded-lg flex items-center justify-center">
                       <IconComponent className="w-5 h-5 text-white" />
