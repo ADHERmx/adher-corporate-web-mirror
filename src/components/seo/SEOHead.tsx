@@ -63,7 +63,10 @@ export const SEOHead = (props: SEOProps) => {
       <meta property="og:title" content={og.title} />
       <meta property="og:description" content={og.description} />
       <meta property="og:image" content={og.image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={og.imageAlt} />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:locale" content={og.locale} />
       <meta property="og:site_name" content={og.siteName} />
 
@@ -84,6 +87,13 @@ export const SEOHead = (props: SEOProps) => {
       {/* Theme Color */}
       <meta name="theme-color" content={SITE_CONFIG.themeColor} />
       <meta name="msapplication-TileColor" content={SITE_CONFIG.themeColor} />
+
+      {/* Icons and Favicons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="mask-icon" href="/mask-icon.svg" color={SITE_CONFIG.themeColor} />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
       {/* Additional Meta Tags */}
       <meta name="author" content={SITE_CONFIG.fullName} />

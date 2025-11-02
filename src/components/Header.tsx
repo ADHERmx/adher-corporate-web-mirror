@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import adherLogo from "@/assets/adher-logo.png";
+import { BUSINESS_INFO } from "@/data/business-info";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollToSection = (id: string) => {
@@ -50,11 +51,11 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm">
               <Phone size={16} className="text-primary" />
-              <span>+52 (55) 1234-5678</span>
+              <span>{BUSINESS_INFO.contact.phones.main}</span>
             </div>
             <div className="flex items-center space-x-2 text-sm">
               <Mail size={16} className="text-primary" />
-              <span>info@adher.com.mx</span>
+              <span>{BUSINESS_INFO.contact.emails.sales}</span>
             </div>
           </div>
 

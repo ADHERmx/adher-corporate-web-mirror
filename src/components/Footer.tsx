@@ -1,5 +1,7 @@
-import { Badge } from "@/components/ui/badge";
-import { Award, Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Badge } from '@/components/ui/badge'
+import { Award, Globe, Mail, MapPin, Phone } from 'lucide-react'
+import { BUSINESS_INFO } from '@/data/business-info'
+
 const Footer = () => {
   return <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -93,23 +95,32 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold mb-4">Contacto</h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
-                <span>Amado Nervo 2910 Norte, Col. Bella Vista</span>
+              <li className="flex items-start">
+                <MapPin className="w-4 h-4 mr-2 text-primary flex-shrink-0 mt-0.5" />
+                <span>
+                  {BUSINESS_INFO.locations.mainOffice.street}, {BUSINESS_INFO.locations.mainOffice.neighborhood}
+                  <br />
+                  {BUSINESS_INFO.locations.mainOffice.city}, {BUSINESS_INFO.locations.mainOffice.stateCode} {BUSINESS_INFO.locations.mainOffice.postalCode}
+                </span>
               </li>
-              <li className="flex items-center">
-                <Phone className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
-                <span>(81) 83 514 881
-(81) 81 150 184</span>
+              <li className="flex items-start">
+                <Phone className="w-4 h-4 mr-2 text-primary flex-shrink-0 mt-0.5" />
+                <span>
+                  {BUSINESS_INFO.contact.phones.main}
+                  <br />
+                  {BUSINESS_INFO.contact.phones.secondary}
+                </span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
-                <span>adher@webtelmex.net.mx</span>
+                <a href={`mailto:${BUSINESS_INFO.contact.emails.sales}`} className="hover:text-primary transition-colors">
+                  {BUSINESS_INFO.contact.emails.sales}
+                </a>
               </li>
               <li className="flex items-center">
                 <Globe className="w-4 h-4 mr-2 text-primary flex-shrink-0" />
-                <a href="https://www.adher.com.mx" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  www.adher.com.mx
+                <a href={BUSINESS_INFO.contact.website.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  {BUSINESS_INFO.contact.website.displayUrl}
                 </a>
               </li>
             </ul>
@@ -119,7 +130,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>© 2024 Acabados Adher S.A. de C.V. Todos los derechos reservados.</p>
+            <p>© {new Date().getFullYear()} {BUSINESS_INFO.legalName}. Todos los derechos reservados.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-primary transition-colors">Política de Privacidad</a>
               <a href="#" className="hover:text-primary transition-colors">Términos de Servicio</a>
