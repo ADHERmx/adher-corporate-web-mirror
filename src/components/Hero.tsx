@@ -47,7 +47,7 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl py-8">
             <div className="flex items-center space-x-3 text-white">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
                 <Calendar className="w-6 h-6 text-primary" />
