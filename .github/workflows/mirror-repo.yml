@@ -45,30 +45,18 @@ jobs:
           echo "✅ Mirror remote configured"
           git remote -v
 
-      - name: Fetch all branches locally
-        run: |
-          # Fetch all branches from origin
-          git fetch --all
-
-          # Create local tracking branches for all remote branches
-          for branch in $(git branch -r | grep -v '\->'); do
-            branch_name=${branch#origin/}
-            if [ "$branch_name" != "HEAD" ]; then
-              git branch --track "$branch_name" "$branch" 2>/dev/null || git branch -f "$branch_name" "$branch"
-            fi
-          done
-
-          echo "✅ Local branches prepared:"
-          git branch -a
-
       - name: Push all branches to mirror
         env:
           MIRROR_TOKEN: ${{ secrets.MIRROR_REPO_TOKEN }}
         run: |
-          # Push all branches to mirror with force to ensure exact sync
-          git push mirror --all --force
+          # Push all refs from origin to mirror
+          # Using refspec to push all branches directly without needing local tracking branches
+          git push mirror 'refs/remotes/origin/*:refs/heads/*' --force
 
           echo "✅ Successfully mirrored all branches to ADHERmx/adher-corporate-web-mirror"
+          echo ""
+          echo "Branches synced:"
+          git branch -r | grep 'origin/' | grep -v 'origin/HEAD' | sed 's/origin\///' | sed 's/^/  - /'
 
       - name: Mirror summary
         run: |
