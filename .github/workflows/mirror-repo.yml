@@ -48,7 +48,7 @@ jobs:
       - name: Fetch all branches locally
         run: |
           # Fetch all branches from origin
-          git fetch origin --all
+          git fetch --all
 
           # Create local tracking branches for all remote branches
           for branch in $(git branch -r | grep -v '\->'); do
