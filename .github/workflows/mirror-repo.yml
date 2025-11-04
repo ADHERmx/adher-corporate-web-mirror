@@ -32,6 +32,8 @@ jobs:
           git fetch mirror --prune || true
 
       - name: Push all branches to mirror
+        env:
+          MIRROR_TOKEN: ${{ secrets.MIRROR_REPO_TOKEN }}
         run: |
           # Push all branches to mirror with force to ensure exact sync
           git push mirror --all --force
