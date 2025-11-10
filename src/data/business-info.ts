@@ -80,6 +80,7 @@ export const BUSINESS_INFO = {
       closes: "18:00",
       display: "7:00 - 18:00",
       openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification" as const,
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "07:00",
         closes: "18:00",
@@ -92,6 +93,7 @@ export const BUSINESS_INFO = {
       closes: "14:00",
       display: "8:00 - 14:00",
       openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification" as const,
         dayOfWeek: ["Saturday"],
         opens: "08:00",
         closes: "14:00",

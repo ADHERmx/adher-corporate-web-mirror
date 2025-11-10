@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Award, Users, Calendar, Clock } from "lucide-react";
-import heroImage from "@/assets/hero-powder-coating.jpg";
+import heroImage from "@/assets/hero-background-new.jpg";
+import adherLogo from "@/assets/adher-logo-white.png";
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -20,7 +21,8 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
-        <div className="max-w-4xl">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="max-w-2xl">
           <Badge className="bg-primary/20 text-primary-foreground border-primary/30 mb-6">
             <Award className="w-4 h-4 mr-2" />
             Certificación ISO 9001:2008
@@ -77,6 +79,16 @@ const Hero = () => {
                 <div className="text-sm text-gray-300">Certificación 9001:2008</div>
               </div>
             </div>
+          </div>
+        </div>
+          
+          {/* Logo Animation */}
+          <div className="hidden lg:flex justify-center items-center">
+            <img 
+              src={adherLogo} 
+              alt="Acabados Adher Logo" 
+              className="w-full max-w-md animate-fade-in opacity-0 [animation-delay:0.5s] [animation-fill-mode:forwards]"
+            />
           </div>
         </div>
       </div>

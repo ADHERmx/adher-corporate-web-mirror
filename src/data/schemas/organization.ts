@@ -25,7 +25,14 @@ export const organizationSchema = (): WithContext<Organization> => {
     description: SITE_CONFIG.defaultDescription,
     email: BUSINESS_INFO.contact.emails.sales,
     telephone: BUSINESS_INFO.contact.phones.mainInternational,
-    address: getSchemaAddress("mainOffice"),
+    address: {
+      "@type": "PostalAddress" as const,
+      streetAddress: BUSINESS_INFO.locations.mainOffice.street,
+      addressLocality: BUSINESS_INFO.locations.mainOffice.city,
+      addressRegion: BUSINESS_INFO.locations.mainOffice.stateCode,
+      postalCode: BUSINESS_INFO.locations.mainOffice.postalCode,
+      addressCountry: BUSINESS_INFO.locations.mainOffice.countryCode,
+    },
     foundingDate: BUSINESS_INFO.established.toString(),
     slogan: BUSINESS_INFO.tagline,
 

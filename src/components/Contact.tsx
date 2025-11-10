@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Globe, Clock, Send, MessageSquare } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import equipoAdher from "@/assets/equipo-adher.jpg";
 const Contact = () => {
   return <section id="contacto" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -17,6 +18,14 @@ const Contact = () => {
             Hablemos de tu Proyecto
           </h2>
           
+          {/* Team Photo */}
+          <div className="max-w-4xl mx-auto mt-8">
+            <img 
+              src={equipoAdher} 
+              alt="Equipo Acabados Adher - Nuestro equipo profesional de trabajo" 
+              className="w-full rounded-lg shadow-lg"
+            />
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">

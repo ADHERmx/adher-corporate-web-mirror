@@ -39,7 +39,14 @@ export const localBusinessSchema = (): WithContext<LocalBusiness> => {
     },
 
     // Physical Address
-    address: getSchemaAddress("mainOffice"),
+    address: {
+      "@type": "PostalAddress" as const,
+      streetAddress: BUSINESS_INFO.locations.mainOffice.street,
+      addressLocality: BUSINESS_INFO.locations.mainOffice.city,
+      addressRegion: BUSINESS_INFO.locations.mainOffice.stateCode,
+      postalCode: BUSINESS_INFO.locations.mainOffice.postalCode,
+      addressCountry: BUSINESS_INFO.locations.mainOffice.countryCode,
+    },
 
     // Geographic coordinates
     geo: {
@@ -89,7 +96,14 @@ export const localBusinessSchema = (): WithContext<LocalBusiness> => {
     subOrganization: {
       "@type": "LocalBusiness",
       name: BUSINESS_INFO.locations.plant.name,
-      address: getSchemaAddress("plant"),
+      address: {
+        "@type": "PostalAddress" as const,
+        streetAddress: BUSINESS_INFO.locations.plant.street,
+        addressLocality: BUSINESS_INFO.locations.plant.city,
+        addressRegion: BUSINESS_INFO.locations.plant.stateCode,
+        postalCode: BUSINESS_INFO.locations.plant.postalCode,
+        addressCountry: BUSINESS_INFO.locations.plant.countryCode,
+      },
     },
   };
 };
