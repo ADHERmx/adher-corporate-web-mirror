@@ -20,11 +20,7 @@ const Contact = () => {
           
           {/* Team Photo */}
           <div className="max-w-4xl mx-auto mt-8">
-            <img 
-              src={equipoAdher} 
-              alt="Equipo Acabados Adher - Nuestro equipo profesional de trabajo" 
-              className="w-full rounded-lg shadow-lg"
-            />
+            <img src={equipoAdher} alt="Equipo Acabados Adher - Nuestro equipo profesional de trabajo" className="w-full rounded-lg shadow-lg" />
           </div>
         </div>
 
@@ -42,15 +38,15 @@ const Contact = () => {
                 <div className="space-y-4 text-muted-foreground">
                   <div>
                     <div className="font-medium text-foreground mb-1">Oficinas Generales</div>
-                    <p>Amado Nervo 2910 Norte</p>
-                    <p>Col. Bella Vista</p>
                     <p>Monterrey, NL, 64410</p>
+                    
+                    
                   </div>
                   <div>
-                    <div className="font-medium text-foreground mb-1">Planta</div>
-                    <p>Amado Nervo 2902 Norte</p>
-                    <p>Col. Bella Vista</p>
-                    <p>Monterrey, NL, 64410</p>
+                    
+                    
+                    
+                    
                   </div>
                 </div>
               </CardContent>
@@ -82,12 +78,7 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <a 
-                    href="https://wa.me/528119103216" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
-                  >
+                  <a href="https://wa.me/528119103216" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                     <FaWhatsapp className="w-4 h-4" />
                     (81) 1910 3216
                   </a>
@@ -103,10 +94,7 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <a 
-                  href="mailto:ventas@adher.com.mx" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
+                <a href="mailto:ventas@adher.com.mx" className="text-muted-foreground hover:text-primary transition-colors">
                   ventas@adher.com.mx
                 </a>
               </CardContent>
