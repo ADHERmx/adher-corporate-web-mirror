@@ -9,11 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center mb-4">
-              <img 
-                src={adherLogoWhite} 
-                alt="Acabados Adher Logo" 
-                className="h-12 w-auto mr-3"
-              />
+              <img src={adherLogoWhite} alt="Acabados Adher Logo" className="h-12 w-auto mr-3" />
               <div>
                 <h3 className="font-heading font-bold text-lg">Acabados Adher</h3>
                 <p className="text-sm text-gray-400">S.A. de C.V.</p>
@@ -99,8 +95,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 text-primary flex-shrink-0 mt-0.5" />
-                <span>
-Monterrey, NL 64410{BUSINESS_INFO.locations.mainOffice.street}, {BUSINESS_INFO.locations.mainOffice.neighborhood}
+                <span>Monterrey, NL 64410{BUSINESS_INFO.locations.mainOffice.street}, {BUSINESS_INFO.locations.mainOffice.neighborhood}
                   <br />
                   {BUSINESS_INFO.locations.mainOffice.city}, {BUSINESS_INFO.locations.mainOffice.stateCode} {BUSINESS_INFO.locations.mainOffice.postalCode}
                 </span>
