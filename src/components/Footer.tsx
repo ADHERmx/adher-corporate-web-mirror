@@ -1,7 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Award, Globe, Mail, MapPin, Phone } from 'lucide-react';
 import { BUSINESS_INFO } from '@/data/business-info';
-import adherLogoWhite from '@/assets/adher-logo-white.png';
+import adherLogoWhite from '@/assets/adher-logo-white-new.png';
 const Footer = () => {
   return <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
