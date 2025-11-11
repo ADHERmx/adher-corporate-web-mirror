@@ -1,7 +1,6 @@
-import { Badge } from '@/components/ui/badge'
-import { Award, Globe, Mail, MapPin, Phone } from 'lucide-react'
-import { BUSINESS_INFO } from '@/data/business-info'
-
+import { Badge } from '@/components/ui/badge';
+import { Award, Globe, Mail, MapPin, Phone } from 'lucide-react';
+import { BUSINESS_INFO } from '@/data/business-info';
 const Footer = () => {
   return <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -98,7 +97,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 text-primary flex-shrink-0 mt-0.5" />
                 <span>
-                  {BUSINESS_INFO.locations.mainOffice.street}, {BUSINESS_INFO.locations.mainOffice.neighborhood}
+Monterrey, NL 64410{BUSINESS_INFO.locations.mainOffice.street}, {BUSINESS_INFO.locations.mainOffice.neighborhood}
                   <br />
                   {BUSINESS_INFO.locations.mainOffice.city}, {BUSINESS_INFO.locations.mainOffice.stateCode} {BUSINESS_INFO.locations.mainOffice.postalCode}
                 </span>
