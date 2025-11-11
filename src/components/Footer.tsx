@@ -1,6 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Award, Globe, Mail, MapPin, Phone } from 'lucide-react';
 import { BUSINESS_INFO } from '@/data/business-info';
+import adherLogoWhite from '@/assets/adher-logo-white.png';
 const Footer = () => {
   return <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -8,9 +9,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gradient-orange rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
+              <img 
+                src={adherLogoWhite} 
+                alt="Acabados Adher Logo" 
+                className="h-12 w-auto mr-3"
+              />
               <div>
                 <h3 className="font-heading font-bold text-lg">Acabados Adher</h3>
                 <p className="text-sm text-gray-400">S.A. de C.V.</p>
