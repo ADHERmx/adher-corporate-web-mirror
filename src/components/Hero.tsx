@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Award, Users, Calendar, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-background-new.jpg";
-import adherLogo from "@/assets/adher-logo-white.png";
+import adherLogo from "@/assets/adher-logo-color.png";
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -84,11 +84,13 @@ const Hero = () => {
           
           {/* Logo Animation */}
           <div className="hidden lg:flex justify-center items-center">
-            <img 
-              src={adherLogo} 
-              alt="Acabados Adher Logo" 
-              className="w-full max-w-md animate-fade-in opacity-0 [animation-delay:0.5s] [animation-fill-mode:forwards]"
-            />
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+              <img 
+                src={adherLogo} 
+                alt="Acabados Adher Logo" 
+                className="w-full max-w-md animate-fade-in opacity-0 [animation-delay:0.5s] [animation-fill-mode:forwards]"
+              />
+            </div>
           </div>
         </div>
       </div>

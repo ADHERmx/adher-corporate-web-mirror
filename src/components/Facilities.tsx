@@ -27,11 +27,39 @@ const Facilities = () => {
     specs: ["Tecnología de pirólisis", "Limpieza profunda", "Recuperación eficiente", "Control automatizado"]
   }, {
     title: "Cuarto de Granallado GOFF",
-    description: "Equipo de granallado GOFF de la más alta tecnología para preparación óptima de superficies.",
+    description: (
+      <>
+        Equipo de granallado{" "}
+        <a 
+          href="https://www.goff-inc.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-primary hover:underline font-semibold"
+        >
+          GOFF
+        </a>
+        {" "}de la más alta tecnología para preparación óptima de superficies.
+      </>
+    ),
     image: blastingRoomImage,
     alt: "Cuarto de granallado GOFF para preparación de superficies metálicas en Acabados Adher",
     icon: Grip,
-    specs: ["Tecnología GOFF", "Preparación superior", "Limpieza profunda", "Mejor adherencia"]
+    specs: [
+      <>
+        Tecnología{" "}
+        <a 
+          href="https://www.goff-inc.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-primary hover:underline font-semibold"
+        >
+          GOFF
+        </a>
+      </>,
+      "Preparación superior",
+      "Limpieza profunda",
+      "Mejor adherencia"
+    ]
   }, {
     title: "Laboratorio de Calidad",
     description: "Instalaciones especializadas para pruebas y control de calidad con equipos de última generación.",
