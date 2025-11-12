@@ -297,7 +297,6 @@ Antes de marcar como "Listo para Producción":
 - [ ] Sitemap generado y accesible
 - [ ] Robots.txt correcto
 - [ ] Documentación revisada
-- [ ] Imagen OG personalizada creada (o instrucciones documentadas)
 - [ ] Equipo informado sobre Google Search Console setup
 
 ---

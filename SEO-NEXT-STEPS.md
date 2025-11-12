@@ -8,33 +8,7 @@ La fundación SEO está 100% completa y lista para producción. Este documento d
 
 ## 📋 Acciones Inmediatas (Antes del Lanzamiento)
 
-### 1. Crear Imagen Open Graph Personalizada 🎨
-**Prioridad:** ALTA
-**Tiempo estimado:** 30-60 minutos
-
-**Estado actual:**
-- Se está usando `hero-powder-coating.jpg` como imagen temporal
-- Funcional pero no optimizada para redes sociales
-
-**Acción requerida:**
-1. Seguir instrucciones en `/public/OG-IMAGE-INSTRUCTIONS.md`
-2. Crear imagen de 1200×630 píxeles con:
-   - Logo de Adher
-   - Texto: "Acabados Adher - Pintura Electrostática desde 1978"
-   - Badge ISO 9001:2008
-   - Colores de marca (naranja #ea580c)
-3. Guardar como `/public/og-image.jpg`
-4. Optimizar a < 300 KB
-
-**Herramientas sugeridas:**
-- Canva (plantilla Facebook Post 1200×630)
-- Figma
-- Adobe Illustrator
-- Usar `/public/og-image.svg` como base
-
----
-
-### 2. Validar Implementación 🔍
+### 1. Validar Implementación 🔍
 **Prioridad:** ALTA
 **Tiempo estimado:** 30 minutos
 
@@ -70,7 +44,7 @@ npm run preview
 
 ---
 
-### 3. Optimizar Build para Producción ⚡
+### 2. Optimizar Build para Producción ⚡
 **Prioridad:** MEDIA
 **Tiempo estimado:** 1-2 horas
 
@@ -122,7 +96,7 @@ Agregar `loading="lazy"` a imágenes below-the-fold:
 
 ## 🌐 Post-Lanzamiento (Primera Semana)
 
-### 4. Configurar Google Search Console 📊
+### 3. Configurar Google Search Console 📊
 **Prioridad:** ALTA
 **Tiempo estimado:** 30 minutos
 
@@ -141,7 +115,7 @@ Agregar `loading="lazy"` a imágenes below-the-fold:
 
 ---
 
-### 5. Configurar Google Analytics 4 📈
+### 4. Configurar Google Analytics 4 📈
 **Prioridad:** ALTA
 **Tiempo estimado:** 45 minutos
 
@@ -172,7 +146,7 @@ npm install --save-dev @types/gtag.js
 
 ---
 
-### 6. Configurar Google Business Profile 🏢
+### 5. Configurar Google Business Profile 🏢
 **Prioridad:** ALTA
 **Tiempo estimado:** 1 hora
 
@@ -199,7 +173,7 @@ npm install --save-dev @types/gtag.js
 
 ## 📱 Mejoras a Mediano Plazo (1-3 Meses)
 
-### 7. Agregar Más Structured Data 📋
+### 6. Agregar Más Structured Data 📋
 **Prioridad:** MEDIA
 
 #### A. FAQ Schema
@@ -244,7 +218,7 @@ Para cada servicio individual:
 
 ---
 
-### 8. Crear Contenido para Blog/Noticias 📝
+### 7. Crear Contenido para Blog/Noticias 📝
 **Prioridad:** MEDIA
 
 **Beneficios SEO:**
@@ -270,7 +244,7 @@ Para cada servicio individual:
 
 ---
 
-### 9. Implementar PWA Features 📲
+### 8. Implementar PWA Features 📲
 **Prioridad:** BAJA
 
 **Elementos:**
@@ -305,7 +279,7 @@ Para cada servicio individual:
 
 ---
 
-### 10. Backlinks y SEO Off-Page 🔗
+### 9. Backlinks y SEO Off-Page 🔗
 **Prioridad:** MEDIA
 
 **Estrategias:**
@@ -431,7 +405,6 @@ Para cada servicio individual:
 ## ✅ Quick Start Checklist
 
 Antes del lanzamiento:
-- [ ] Crear imagen OG personalizada
 - [ ] Validar con Google Rich Results Test
 - [ ] Validar con Facebook Debugger
 - [ ] Ejecutar Lighthouse (score ≥ 95)

@@ -26,15 +26,6 @@ Esta guía es para una persona de diseño sin conocimientos técnicos. Son pasos
 
 ---
 
-## 🎨 Entregables de iconos (PWA) para dev
-
-- `apple-touch-icon.png` (180×180, PNG, fondo sólido, logo ~70% con margen)
-- `mask-icon.svg` (SVG negro, silueta simple del logo para Safari)
-- Opcional para compatibilidad: `favicon-16x16.png`, `favicon-32x32.png`, `favicon-192x192.png`, `favicon-512x512.png`
-- Mantener cada archivo < 100 KB. Entregar en una carpeta o ZIP.
-
----
-
 ## ✍️ Contenido a preparar (2–3 semanas)
 
 - FAQs: 5–7 preguntas reales con respuestas cortas y útiles.
