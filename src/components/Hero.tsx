@@ -22,7 +22,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div>
           <Badge className="bg-primary/20 text-primary-foreground border-primary/30 mb-6">
             <Award className="w-4 h-4 mr-2" />
             Certificación ISO 9001:2008
