@@ -26,6 +26,11 @@
     --gray-800: 0 0% 15%;
     --gray-900: 0 0% 9%;
     
+    /* Beige colors */
+    --beige-50: 40 40% 97%;
+    --beige-100: 40 35% 92%;
+    --beige-200: 40 30% 85%;
+    
     /* System Colors */
     --background: 0 0% 100%;
     --foreground: 0 0% 9%;
