@@ -21,8 +21,8 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div className="max-w-2xl">
+        <div className="grid lg:grid-cols-2 gap-0 items-center">
+          <div className="max-w-2xl lg:pr-8">
           <Badge className="bg-primary/20 text-primary-foreground border-primary/30 mb-6">
             <Award className="w-4 h-4 mr-2" />
             Certificación ISO 9001:2008
@@ -82,17 +82,15 @@ const Hero = () => {
           </div>
         </div>
           
-          {/* Logo Animation */}
-          <div className="hidden lg:flex justify-center items-center">
-            <div className="bg-beige-100 rounded-2xl p-12 shadow-2xl">
-              <img
-                src={adherLogo}
-                alt="Acabados Adher - Acabados y Recubrimientos"
-                width={1920}
-                height={1483}
-                className="w-full max-w-md h-auto animate-fade-in opacity-0 [animation-delay:0.5s] [animation-fill-mode:forwards]"
-              />
-            </div>
+          {/* Logo Section with Solid Beige Background */}
+          <div className="hidden lg:flex justify-center items-center bg-beige-100 min-h-[600px] -mr-4 rounded-l-3xl p-12">
+            <img
+              src={adherLogo}
+              alt="Acabados Adher - Acabados y Recubrimientos"
+              width={1920}
+              height={1483}
+              className="w-full max-w-md h-auto animate-fade-in opacity-0 [animation-delay:0.5s] [animation-fill-mode:forwards]"
+            />
           </div>
         </div>
       </div>
