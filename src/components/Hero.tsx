@@ -84,10 +84,10 @@ const Hero = () => {
           
           {/* Logo Animation */}
           <div className="hidden lg:flex justify-center items-center">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+            <div className="bg-beige-100 rounded-2xl p-12 shadow-2xl">
               <img
                 src={adherLogo}
-                alt="Acabados Adher Logo"
+                alt="Acabados Adher - Acabados y Recubrimientos"
                 width={1920}
                 height={1483}
                 className="w-full max-w-md h-auto animate-fade-in opacity-0 [animation-delay:0.5s] [animation-fill-mode:forwards]"

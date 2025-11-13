@@ -68,6 +68,11 @@ export default {
           800: "hsl(var(--gray-800))",
           900: "hsl(var(--gray-900))",
         },
+        beige: {
+          50: "hsl(var(--beige-50))",
+          100: "hsl(var(--beige-100))",
+          200: "hsl(var(--beige-200))",
+        },
       },
       backgroundImage: {
         'gradient-orange': 'var(--gradient-orange)',
