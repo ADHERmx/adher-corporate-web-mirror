@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Custom Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Questrial:wght@400&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Tipografía Profesional ADHER
+ * Inter: Títulos y encabezados (Industrial, moderno, preciso)
+ * Montserrat: Cuerpo de texto (Legible, profesional, técnico)
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap');
 
 /* Acabados Adher Corporate Design System */
 
@@ -128,10 +131,132 @@
 
   body {
     @apply bg-background text-foreground font-body;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
   }
   
-  h1, h2, h3, h4, h5, h6 {
+  /* Jerarquía Tipográfica ADHER - Industrial & Profesional */
+  
+  /* H1 - Títulos Principales (Hero, Landing) */
+  h1 {
     @apply font-heading;
+    font-size: clamp(2.5rem, 5vw, 4rem); /* 40px - 64px */
+    font-weight: 700; /* Bold */
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* H2 - Títulos de Sección */
+  h2 {
+    @apply font-heading;
+    font-size: clamp(2rem, 4vw, 3rem); /* 32px - 48px */
+    font-weight: 700; /* Bold */
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 1.25rem;
+  }
+  
+  /* H3 - Subtítulos Principales */
+  h3 {
+    @apply font-heading;
+    font-size: clamp(1.5rem, 3vw, 2rem); /* 24px - 32px */
+    font-weight: 600; /* SemiBold */
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+  
+  /* H4 - Subtítulos Secundarios */
+  h4 {
+    @apply font-heading;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem); /* 20px - 24px */
+    font-weight: 600; /* SemiBold */
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+    margin-bottom: 0.875rem;
+  }
+  
+  /* H5 - Subtítulos Terciarios */
+  h5 {
+    @apply font-heading;
+    font-size: clamp(1.125rem, 2vw, 1.25rem); /* 18px - 20px */
+    font-weight: 600; /* SemiBold */
+    line-height: 1.4;
+    letter-spacing: 0;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* H6 - Subtítulos Menores */
+  h6 {
+    @apply font-heading;
+    font-size: 1rem; /* 16px */
+    font-weight: 600; /* SemiBold */
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-bottom: 0.625rem;
+    text-transform: uppercase;
+  }
+  
+  /* Párrafos - Montserrat Regular */
+  p {
+    @apply font-body;
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+  
+  /* Texto Grande - Intro/Lead */
+  .text-lead {
+    @apply font-body;
+    font-size: clamp(1.125rem, 2vw, 1.25rem); /* 18px - 20px */
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Texto Pequeño - Captions, Labels */
+  small, .text-small {
+    @apply font-body;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+  
+  /* Botones - Inter SemiBold */
+  button, .btn {
+    @apply font-heading;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Links y Navegación - Inter Medium */
+  a, nav a {
+    @apply font-heading;
+    font-weight: 500;
+    letter-spacing: 0;
+    transition: color 0.2s ease;
+  }
+  
+  /* Énfasis y Strong */
+  strong, b {
+    font-weight: 600;
+  }
+  
+  /* Listas */
+  ul, ol {
+    @apply font-body;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
   }
 }
 
