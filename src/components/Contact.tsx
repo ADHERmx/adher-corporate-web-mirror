@@ -31,14 +31,17 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span>Nuestras Ubicaciones</span>
+                  <span>Nuestra Ubicación</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4 text-muted-foreground">
                   <div>
                     <div className="font-medium text-foreground mb-1">Oficinas Generales</div>
-                    <p>Monterrey, NL, 64410</p>
+                    <p>Amado Nervo No. 2916
+Col. Bella Vista
+64410 Monterrey, N.L.
+México</p>
                     
                     
                   </div>
