@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Factory, Flame, Microscope, Truck, Grip, Building2 } from "lucide-react";
 import curingOvenImage from "@/assets/facility-curing-oven.jpg";
-import qualityControlImage from "@/assets/facility-quality-control.jpg";
+import qualityControlImage from "@/assets/facility-quality-control.png";
 import shippingAreaImage from "@/assets/facility-shipping-area.jpg";
 import monorailLineImage from "@/assets/facility-monorail-line.jpg";
 import blastingRoomImage from "@/assets/facility-blasting-room.jpg";
