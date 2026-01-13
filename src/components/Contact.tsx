@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,6 +8,43 @@ import { MapPin, Phone, Mail, Globe, Clock, Send, MessageSquare } from "lucide-r
 import { FaWhatsapp } from "react-icons/fa";
 import equipoAdher from "@/assets/equipo-adher.jpg";
 const Contact = () => {
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (status === "sending") {
+      return;
+    }
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    if (formData.get("_gotcha")) {
+      return;
+    }
+
+    try {
+      setStatus("sending");
+      const response = await fetch("https://formspree.io/f/xbddjplr", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        form.reset();
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return <section id="contacto" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -144,50 +182,71 @@ México</p>
                 </p>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Nombre *</label>
-                    <Input placeholder="Tu nombre completo" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Empresa</label>
-                    <Input placeholder="Nombre de tu empresa" />
-                  </div>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Teléfono *</label>
-                    <Input placeholder="+52 (55) 1234-5678" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Email *</label>
-                    <Input type="email" placeholder="tu@email.com" />
-                  </div>
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Servicio de Interés</label>
-                  <select className="w-full px-3 py-2 border border-input rounded-md bg-background">
-                    <option value="">Selecciona un servicio</option>
-                    <option value="pintura-polvo">Pintura en Polvo</option>
-                    <option value="granallado">Granallado/Shot Blast</option>
-                    <option value="empaque">Empaque</option>
-                    <option value="just-in-time">Just In Time</option>
-                    <option value="calidad">Aseguramiento de Calidad</option>
-                    <option value="cotizacion">Cotización General</option>
-                  </select>
-                </div>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Nombre *</label>
+                      <Input name="nombre" placeholder="Tu nombre completo" required minLength={2} />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Empresa</label>
+                      <Input name="empresa" placeholder="Nombre de tu empresa" />
+                    </div>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Teléfono *</label>
+                      <Input
+                        name="telefono"
+                        placeholder="+52 (55) 1234-5678"
+                        required
+                        pattern="^[+()0-9\\s-]{7,}$"
+                        title="Ingresa un teléfono válido."
+                      />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Email *</label>
+                      <Input name="email" type="email" placeholder="tu@email.com" required />
+                    </div>
+                  </div>
 
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Mensaje *</label>
-                  <Textarea placeholder="Describe tu proyecto o consulta..." rows={4} />
-                </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Servicio de Interés</label>
+                    <select name="servicio" className="w-full px-3 py-2 border border-input rounded-md bg-background">
+                      <option value="">Selecciona un servicio</option>
+                      <option value="pintura-polvo">Pintura en Polvo</option>
+                      <option value="granallado">Granallado/Shot Blast</option>
+                      <option value="empaque">Empaque</option>
+                      <option value="just-in-time">Just In Time</option>
+                      <option value="calidad">Aseguramiento de Calidad</option>
+                      <option value="cotizacion">Cotización General</option>
+                    </select>
+                  </div>
 
-                <Button className="w-full bg-gradient-orange hover:bg-gradient-orange/90 text-white">
-                  <Send className="w-4 h-4 mr-2" />
-                  Enviar Mensaje
-                </Button>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Mensaje *</label>
+                    <Textarea name="mensaje" placeholder="Describe tu proyecto o consulta..." rows={4} required minLength={10} />
+                  </div>
+
+                  <Button type="submit" className="w-full bg-gradient-orange hover:bg-gradient-orange/90 text-white" disabled={status === "sending"}>
+                    <Send className="w-4 h-4 mr-2" />
+                    {status === "sending" ? "Enviando..." : "Enviar Mensaje"}
+                  </Button>
+                </form>
+
+                {status === "success" && (
+                  <p className="text-sm text-green-600 text-center" role="status" aria-live="polite">
+                    ¡Gracias! Tu mensaje se envió correctamente. Te contactaremos pronto.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-sm text-red-600 text-center" role="status" aria-live="polite">
+                    Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo.
+                  </p>
+                )}
 
                 <p className="text-xs text-muted-foreground text-center">
                   * Campos obligatorios. Nos comprometemos a proteger tu privacidad y 
